@@ -3,17 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	distance:=100
-	consumptionOfFuel:=6
-	amountOfFuel:=3
+	const distance = 100
+	fuelConsume := 6
+	fuelAmount := 3
 
-	result:=approximateDistance(distance,consumptionOfFuel,amountOfFuel)
+	result := approxDistance(distance, fuelConsume, fuelAmount)
 
-	fmt.Println(result,"km")
+	fmt.Println(result, "km")
 }
 
-func approximateDistance(distance int,consumptionOfFuel int, amountOfFuel int)int{
-	var approximateDistance int
-	approximateDistance = distance*amountOfFuel/consumptionOfFuel
-	return approximateDistance-approximateDistance/10
+func approxDistance(distance int, fuelConsume int, fuelAmount int) int {
+	var approxDistance int
+	approxDistance = distance * fuelAmount / fuelConsume
+	return approxDistance - approxDistance/10
 }
