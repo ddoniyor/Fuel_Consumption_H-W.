@@ -14,6 +14,9 @@ func main() {
 
 func approxDistance(distance int, fuelConsume int, fuelAmount int) int {
 	var approxDistance int
+
 	approxDistance = distance * fuelAmount / fuelConsume
-	return approxDistance - approxDistance/10
+	tenPercent := approxDistance / 10
+
+	return approxDistance - tenPercent
 }
